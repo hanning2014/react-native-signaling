@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

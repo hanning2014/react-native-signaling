@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/src/main/assets"/><source path="/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/home/ninghan/Desktop/air-hospital/Patient-App/node_modules/react-native-agora/android/src/release/assets"/></dataSet></merger>
