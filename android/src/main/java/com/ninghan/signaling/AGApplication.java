@@ -10,7 +10,7 @@ public class AGApplication extends Application {
 
 
     private static AGApplication mInstance;
-    private AgoraAPIOnlySignal m_agoraAPI;
+    public AgoraAPIOnlySignal m_agoraAPI;
 
 
     public static AGApplication the() {
@@ -34,7 +34,7 @@ public class AGApplication extends Application {
 
 
     private void setupAgoraEngine() {
-        String appID = getString(R.string.agora_app_id);
+        String appID = "15a59de6b6b8406582710db1317e9e34";
 
         try {
             m_agoraAPI = AgoraAPIOnlySignal.getInstance(this, appID);
