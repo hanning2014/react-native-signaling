@@ -64,6 +64,12 @@ public class SignalingModule extends ReactContextBaseJavaModule {
         Callback();
     }
 
+     // loginout siginal
+     @ReactMethod
+     public void logout() {
+          agoraAPI.logout();
+     }
+
     // join channel
     @ReactMethod
     public void channelJoin(final String roomId) {
@@ -212,8 +218,12 @@ public class SignalingModule extends ReactContextBaseJavaModule {
                                 map.putString("type", "onLogoutForNetwork");
                                 map.putInt("code", i);
                                 commonEvent(map);
+                            }else {
+                                WritableMap map = Arguments.createMap();
+                                map.putString("type", "onLogout");
+                                map.putInt("code", i);
+                                commonEvent(map);
                             }
-
                         }
                     });
 
