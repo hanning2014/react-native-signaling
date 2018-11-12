@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		983D959C2196EF3700BE1A29 /* RCTSignaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 983D959B2196EF3700BE1A29 /* RCTSignaling.m */; };
-		983D959D2196EF3700BE1A29 /* RCTSignaling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 983D959A2196EF3700BE1A29 /* RCTSignaling.h */; };
+		983D972B2197085000BE1A29 /* RCTSignaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 983D972A2197085000BE1A29 /* RCTSignaling.m */; };
+		983D972C2197085000BE1A29 /* RCTSignaling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 983D97292197085000BE1A29 /* RCTSignaling.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		983D95952196EF3700BE1A29 /* CopyFiles */ = {
+		983D97242197085000BE1A29 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				983D959D2196EF3700BE1A29 /* RCTSignaling.h in CopyFiles */,
+				983D972C2197085000BE1A29 /* RCTSignaling.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		983D95972196EF3700BE1A29 /* libRCTSignaling.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSignaling.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		983D959A2196EF3700BE1A29 /* RCTSignaling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTSignaling.h; sourceTree = "<group>"; };
-		983D959B2196EF3700BE1A29 /* RCTSignaling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTSignaling.m; sourceTree = "<group>"; };
+		983D97262197085000BE1A29 /* libRCTSignaling.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSignaling.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		983D97292197085000BE1A29 /* RCTSignaling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTSignaling.h; sourceTree = "<group>"; };
+		983D972A2197085000BE1A29 /* RCTSignaling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTSignaling.m; sourceTree = "<group>"; };
+		983D99E82199960100BE1A29 /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		983D95942196EF3700BE1A29 /* Frameworks */ = {
+		983D97232197085000BE1A29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,27 +42,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		983D958E2196EF3700BE1A29 = {
+		983D971D2197085000BE1A29 = {
 			isa = PBXGroup;
 			children = (
-				983D95992196EF3700BE1A29 /* RCTSignaling */,
-				983D95982196EF3700BE1A29 /* Products */,
+				983D97282197085000BE1A29 /* RCTSignaling */,
+				983D97272197085000BE1A29 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		983D95982196EF3700BE1A29 /* Products */ = {
+		983D97272197085000BE1A29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				983D95972196EF3700BE1A29 /* libRCTSignaling.a */,
+				983D97262197085000BE1A29 /* libRCTSignaling.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		983D95992196EF3700BE1A29 /* RCTSignaling */ = {
+		983D97282197085000BE1A29 /* RCTSignaling */ = {
 			isa = PBXGroup;
 			children = (
-				983D959A2196EF3700BE1A29 /* RCTSignaling.h */,
-				983D959B2196EF3700BE1A29 /* RCTSignaling.m */,
+				983D99E82199960100BE1A29 /* libs */,
+				983D97292197085000BE1A29 /* RCTSignaling.h */,
+				983D972A2197085000BE1A29 /* RCTSignaling.m */,
 			);
 			path = RCTSignaling;
 			sourceTree = "<group>";
@@ -69,13 +71,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		983D95962196EF3700BE1A29 /* RCTSignaling */ = {
+		983D97252197085000BE1A29 /* RCTSignaling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 983D95A02196EF3700BE1A29 /* Build configuration list for PBXNativeTarget "RCTSignaling" */;
+			buildConfigurationList = 983D972F2197085000BE1A29 /* Build configuration list for PBXNativeTarget "RCTSignaling" */;
 			buildPhases = (
-				983D95932196EF3700BE1A29 /* Sources */,
-				983D95942196EF3700BE1A29 /* Frameworks */,
-				983D95952196EF3700BE1A29 /* CopyFiles */,
+				983D97222197085000BE1A29 /* Sources */,
+				983D97232197085000BE1A29 /* Frameworks */,
+				983D97242197085000BE1A29 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -83,53 +85,53 @@
 			);
 			name = RCTSignaling;
 			productName = RCTSignaling;
-			productReference = 983D95972196EF3700BE1A29 /* libRCTSignaling.a */;
+			productReference = 983D97262197085000BE1A29 /* libRCTSignaling.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		983D958F2196EF3700BE1A29 /* Project object */ = {
+		983D971E2197085000BE1A29 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "黄洪波";
 				TargetAttributes = {
-					983D95962196EF3700BE1A29 = {
+					983D97252197085000BE1A29 = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfigurationList = 983D95922196EF3700BE1A29 /* Build configuration list for PBXProject "RCTSignaling" */;
+			buildConfigurationList = 983D97212197085000BE1A29 /* Build configuration list for PBXProject "RCTSignaling" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 983D958E2196EF3700BE1A29;
-			productRefGroup = 983D95982196EF3700BE1A29 /* Products */;
+			mainGroup = 983D971D2197085000BE1A29;
+			productRefGroup = 983D97272197085000BE1A29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				983D95962196EF3700BE1A29 /* RCTSignaling */,
+				983D97252197085000BE1A29 /* RCTSignaling */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		983D95932196EF3700BE1A29 /* Sources */ = {
+		983D97222197085000BE1A29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				983D959C2196EF3700BE1A29 /* RCTSignaling.m in Sources */,
+				983D972B2197085000BE1A29 /* RCTSignaling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		983D959E2196EF3700BE1A29 /* Debug */ = {
+		983D972D2197085000BE1A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		983D959F2196EF3700BE1A29 /* Release */ = {
+		983D972E2197085000BE1A29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,11 +241,19 @@
 			};
 			name = Release;
 		};
-		983D95A12196EF3700BE1A29 /* Debug */ = {
+		983D97302197085000BE1A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN4TJ5AD3C;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../../react-native/React\"",
+					"\"$(SRCROOT)/../../react-native/Libraries\"",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -251,11 +261,16 @@
 			};
 			name = Debug;
 		};
-		983D95A22196EF3700BE1A29 /* Release */ = {
+		983D97312197085000BE1A29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AN4TJ5AD3C;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../react-native/React\"";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RCTSignaling/libs";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -266,25 +281,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		983D95922196EF3700BE1A29 /* Build configuration list for PBXProject "RCTSignaling" */ = {
+		983D97212197085000BE1A29 /* Build configuration list for PBXProject "RCTSignaling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				983D959E2196EF3700BE1A29 /* Debug */,
-				983D959F2196EF3700BE1A29 /* Release */,
+				983D972D2197085000BE1A29 /* Debug */,
+				983D972E2197085000BE1A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		983D95A02196EF3700BE1A29 /* Build configuration list for PBXNativeTarget "RCTSignaling" */ = {
+		983D972F2197085000BE1A29 /* Build configuration list for PBXNativeTarget "RCTSignaling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				983D95A12196EF3700BE1A29 /* Debug */,
-				983D95A22196EF3700BE1A29 /* Release */,
+				983D97302197085000BE1A29 /* Debug */,
+				983D97312197085000BE1A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 983D958F2196EF3700BE1A29 /* Project object */;
+	rootObject = 983D971E2197085000BE1A29 /* Project object */;
 }
