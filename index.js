@@ -2,13 +2,16 @@ import {
     NativeModules,
     findNodeHandle,
     NativeAppEventEmitter
-} from 'react-native';
+}
+    from 'react-native';
 
-const { Signaling } = NativeModules
+const {
+    Signaling
+} = NativeModules
 
-export default {
-    ...Signaling,
-init(appId = null){
+export
+default {...Signaling,
+init(appId = null) {
     Signaling.init(appId);
 },
 login(userId) {
@@ -18,7 +21,7 @@ login(userId) {
 eventEmitter(fnConf) {
     //there are no `removeListener` for NativeAppEventEmitter & DeviceEventEmitter
     this.listener && this.listener.remove();
-    this.listener = NativeAppEventEmitter.addListener('SignalingEvent', event => {
+    this.listener = NativeAppEventEmitter.addListener('SignalingEvent', event = >{
             fnConf[event['type']] && fnConf[event['type']](event);
 });
 },
