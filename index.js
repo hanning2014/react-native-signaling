@@ -21,7 +21,7 @@ login(userId) {
 eventEmitter(fnConf) {
     //there are no `removeListener` for NativeAppEventEmitter & DeviceEventEmitter
     this.listener && this.listener.remove();
-    this.listener = NativeAppEventEmitter.addListener('SignalingEvent', event = >{
+    this.listener = NativeAppEventEmitter.addListener('SignalingEvent', event =>{
             fnConf[event['type']] && fnConf[event['type']](event);
 });
 },
