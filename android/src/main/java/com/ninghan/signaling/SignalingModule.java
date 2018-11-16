@@ -547,7 +547,7 @@ public class SignalingModule extends ReactContextBaseJavaModule {
 
 
                 @Override
-                public void onError(String s, int i, String s1) {
+                public void onError(final String s, final int i, final String s1) {
                     Log.i(TAG, "onError s:" + s + " s1:" + s1);
                     // 把所有的错误日志收集起来
                     runOnUiThread(new Runnable() {
