@@ -130,6 +130,21 @@ public class SignalingModule extends ReactContextBaseJavaModule {
         agoraAPI.channelQueryUserNum(channelID);
     }
 
+    // accept join channnel
+    @ReactMethod
+    public void channelInviteAccept(String channelID, String account, String extras) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteAccept(channelID, account, extras);
+    }
+
+     // reject join channnel
+    @ReactMethod
+    public void channelInviteRefuse(String channelID, String account, String extras) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteRefuse(channelID, account, 0, extras);
+    }
+
+
     // invite someone join channnel
     @ReactMethod
     public void channelInviteUser2(String channelID, String account, String extras) {
