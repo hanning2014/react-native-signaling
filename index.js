@@ -55,6 +55,9 @@ channelInviteAccept(channelID, account, extras) {
 channelInviteRefuse(channelID, account, extras) {
     Signaling.channelInviteRefuse(channelID, account, extras);
 },
+channelInviteEnd(channelID, account) {
+    Signaling.channelInviteEnd(channelID, account, 0);
+},
 /* 回调类型如下，具体使用参考
  　android: https://docs.agora.io/cn/Signaling/signal_android?platform=Android#oninvitereceived-android
  ["onLogout","onLoginSuccess", "onLoginFailed", "onChannelJoined", "onChannelJoinFailed", "onChannelLeaved", "onChannelUserList","onChannelUserJoined","onChannelUserLeaved","onQueryUserStatusResult","onChannelQueryUserNumResult",

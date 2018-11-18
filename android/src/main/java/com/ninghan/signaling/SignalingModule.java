@@ -134,7 +134,7 @@ public class SignalingModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void channelInviteAccept(String channelID, String account, String extras) {
         if(channelID == null) return;
-        agoraAPI.channelInviteAccept(channelID, account, extras);
+        agoraAPI.channelInviteAccept(channelID, account, 0, extras);
     }
 
      // reject join channnel
@@ -150,6 +150,13 @@ public class SignalingModule extends ReactContextBaseJavaModule {
     public void channelInviteUser2(String channelID, String account, String extras) {
         if(channelID == null) return;
         agoraAPI.channelInviteUser2(channelID, account, extras);
+    }
+
+    // 结束呼叫
+    @ReactMethod
+    public void channelInviteEnd(String channelID, String account, int uid) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteEnd(channelID, account, uid);
     }
 
 
