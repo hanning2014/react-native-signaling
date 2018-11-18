@@ -130,11 +130,33 @@ public class SignalingModule extends ReactContextBaseJavaModule {
         agoraAPI.channelQueryUserNum(channelID);
     }
 
+    // accept join channnel
+    @ReactMethod
+    public void channelInviteAccept(String channelID, String account, String extras) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteAccept(channelID, account, 0, extras);
+    }
+
+     // reject join channnel
+    @ReactMethod
+    public void channelInviteRefuse(String channelID, String account, String extras) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteRefuse(channelID, account, 0, extras);
+    }
+
+
     // invite someone join channnel
     @ReactMethod
     public void channelInviteUser2(String channelID, String account, String extras) {
         if(channelID == null) return;
         agoraAPI.channelInviteUser2(channelID, account, extras);
+    }
+
+    // 结束呼叫
+    @ReactMethod
+    public void channelInviteEnd(String channelID, String account, int uid) {
+        if(channelID == null) return;
+        agoraAPI.channelInviteEnd(channelID, account, uid);
     }
 
 
@@ -157,7 +179,7 @@ public class SignalingModule extends ReactContextBaseJavaModule {
                             WritableMap map = Arguments.createMap();
                             map.putString("type", "onLoginSuccess");
                             map.putInt("uid", i);
-                            map.putInt("uid1", i1);
+                            map.putInt("fid", i1);
                             commonEvent(map);
                         }
                     });
@@ -169,10 +191,9 @@ public class SignalingModule extends ReactContextBaseJavaModule {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-
                             WritableMap map = Arguments.createMap();
                             map.putString("type", "onLoginFailed");
-                            map.putInt("uid", i);
+                            map.putInt("ecode", i);
                             commonEvent(map);
 
                         }
@@ -202,7 +223,7 @@ public class SignalingModule extends ReactContextBaseJavaModule {
                             WritableMap map = Arguments.createMap();
                             map.putString("type", "onChannelJoinFailed");
                             map.putString("channelID", channelID);
-                            map.putInt("channelID", ecode);
+                            map.putInt("ecode", ecode);
                             commonEvent(map);
                         }
                     });

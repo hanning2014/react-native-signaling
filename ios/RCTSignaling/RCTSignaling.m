@@ -47,10 +47,72 @@ RCT_EXPORT_MODULE();
  */
 RCT_EXPORT_METHOD(init:(NSString *)AppId) {
     // 赋值appid
+    if(AppId == nil) return;
     _appid = AppId;
     _agoraApi = [AgoraAPI getInstanceWithoutMedia: AppId];
     [self callBackSendMsgToJS];
 }
+
+// 登录
+RCT_EXPORT_METHOD(login: (NSString *)account) {
+    [_agoraApi login2: _appid account:account token: @"_no_need_token" uid:0  deviceID: @""  retry_time_in_s:5  retry_count:1];
+}
+
+// 登出
+RCT_EXPORT_METHOD(logout) {
+    [_agoraApi logout];
+}
+
+// 加入频道
+RCT_EXPORT_METHOD(channelJoin: (NSString *)roomId) {
+    [_agoraApi channelJoin: roomId];
+}
+
+// 发送单个消息
+RCT_EXPORT_METHOD(sendSignalMsg: (NSString *)channelName msg: (NSString *) msg) {
+    [_agoraApi messageInstantSend: channelName uid:0 msg:msg msgID: @""];
+}
+
+// 发送频道消息
+RCT_EXPORT_METHOD(sendChannelMsg: (NSString *)channelName msg: (NSString *) msg) {
+    [_agoraApi messageChannelSend: channelName msg:msg msgID: @""];
+}
+
+// channel leave
+RCT_EXPORT_METHOD(channelLeave: (NSString *)channelId) {
+    [_agoraApi channelLeave: channelId];
+}
+
+// query user status
+RCT_EXPORT_METHOD(queryUserStatus: (NSString *)account) {
+    [_agoraApi queryUserStatus: account];
+}
+
+// channel query user nun
+RCT_EXPORT_METHOD(channelQueryUserNum: (NSString *)channelId) {
+    [_agoraApi channelQueryUserNum: channelId];
+}
+
+// accept join channnel
+RCT_EXPORT_METHOD(channelInviteAccept: (NSString *)channelId account: (NSString *) account extra:  (NSString *) extra) {
+    [_agoraApi channelInviteAccept:channelId account:account uid:0 extra:extra];
+}
+
+// refuse join channnel
+RCT_EXPORT_METHOD(channelInviteRefuse: (NSString *)channelId account: (NSString *) account extra:  (NSString *) extra) {
+    [_agoraApi channelInviteRefuse:channelId account:account uid:0 extra:extra];
+}
+
+// invite someone join channnel
+RCT_EXPORT_METHOD(channelInviteUser2: (NSString *)channelId account: (NSString *) account extra:  (NSString *) extra) {
+    [_agoraApi channelInviteUser2:channelId account:account extra:extra];
+}
+
+// 结束呼叫
+RCT_EXPORT_METHOD(channelInviteEnd: (NSString *)channelId account: (NSString *) account uid: (uint32_t) uid) {
+    [_agoraApi channelInviteEnd:channelId account:account uid:0];
+}
+
 
 //回调函数
 
@@ -136,7 +198,7 @@ RCT_EXPORT_METHOD(init:(NSString *)AppId) {
 
         params[@"type"] = @"onLogout";
 
-        params[@"ecode"] = [NSString stringWithFormat:@"%ld", ecode];
+        params[@"code"] = [NSString stringWithFormat:@"%ld", ecode];
 
         [weakSelf sendEvent:params];
     };
@@ -527,47 +589,6 @@ RCT_EXPORT_METHOD(init:(NSString *)AppId) {
         [weakSelf sendEvent:params];
 
     };
-}
-
-// 登录
-RCT_EXPORT_METHOD(login: (NSString *)account) {
-    [_agoraApi login2: _appid account:account token: @"_no_need_token" uid:0  deviceID: @""  retry_time_in_s:5  retry_count:1];
-}
-
-// 登出
-RCT_EXPORT_METHOD(logout) {
-    [_agoraApi logout];
-}
-
-// 加入频道
-RCT_EXPORT_METHOD(channelJoin: (NSString *)roomId) {
-    [_agoraApi channelJoin: roomId];
-}
-
-// 发送单个消息
-RCT_EXPORT_METHOD(sendSignalMsg: (NSString *)channelName msg: (NSString *) msg) {
-    [_agoraApi messageInstantSend: channelName uid:0 msg:msg msgID: @""];
-}
-
-// 发送频道消息
-RCT_EXPORT_METHOD(sendChannelMsg: (NSString *)channelName msg: (NSString *) msg) {
-    [_agoraApi messageChannelSend: channelName msg:msg msgID: @""];
-}
-
-// 以下是回调
-//-（void）onLogout:(NSUInteger)ecode {
-//    NSMutableDictionary *params = @{}.mutableCopy;
-//    params[@"type"] = @"onLogout";
-//    params[@"ecode"] = [NSNumber numberWithInteger:ecode];
-//    [self sendEvent:params];
-//}
-
-- (void)_agoraApi:(AgoraAPI * )engine onLogout:(NSUInteger)ecode{
-    NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"type"] = @"onLogout";
-    params[@"uid"] = [NSNumber numberWithInteger:ecode];
-
-    [self sendEvent:params];
 }
 
 
