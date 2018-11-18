@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <React/RCTBridgeModule.h>
 #import <AgoraSigKit/AgoraSigKit.h>
 
-@interface RCTSignaling : NSObject
+@interface RCTSignaling : NSObject<RCTBridgeModule>
+
+@property (nonatomic, copy) NSString *appid;
 
 @end
