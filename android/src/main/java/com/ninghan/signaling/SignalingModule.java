@@ -37,7 +37,7 @@ public class SignalingModule extends ReactContextBaseJavaModule {
 
 
     private void commonEvent(WritableMap map) {
-        sendEvent(getReactApplicationContext(), "SignalingEvent", map);
+        sendEvent(getReactApplicationContext(), "agoraSignaling", map);
     }
 
     private void sendEvent(ReactContext reactContext,
