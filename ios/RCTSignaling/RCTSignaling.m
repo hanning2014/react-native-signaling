@@ -343,7 +343,7 @@ RCT_EXPORT_METHOD(channelInviteEnd: (NSString *)channelId account: (NSString *) 
     _agoraApi.onInviteAcceptedByPeer=^(NSString* channelID,NSString* account,uint32_t uid,NSString* extra){
         NSMutableDictionary *params = @{}.mutableCopy;
 
-        params[@"type"] = @"onInviteReceivedByPeer";
+        params[@"type"] = @"onInviteAcceptedByPeer";
 
         params[@"channelID"] = [NSString stringWithFormat:@"%@", channelID];
         params[@"account"] = [NSString stringWithFormat:@"%@", account];
@@ -355,7 +355,7 @@ RCT_EXPORT_METHOD(channelInviteEnd: (NSString *)channelId account: (NSString *) 
     _agoraApi.onInviteRefusedByPeer=^(NSString* channelID,NSString* account,uint32_t uid,NSString* extra){
         NSMutableDictionary *params = @{}.mutableCopy;
 
-        params[@"type"] = @"onInviteReceivedByPeer";
+        params[@"type"] = @"onInviteRefusedByPeer";
 
         params[@"channelID"] = [NSString stringWithFormat:@"%@", channelID];
         params[@"account"] = [NSString stringWithFormat:@"%@", account];
